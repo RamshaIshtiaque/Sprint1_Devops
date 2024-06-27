@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/aircraft")
@@ -18,7 +17,7 @@ public class AircraftController {
     private AircraftService aircraftService;
 
     @GetMapping
-    public Map<Long, Aircraft> getAllAircraft() {
+    public List<Aircraft> getAllAircraft() {
         return aircraftService.getAllAircraft();
     }
 

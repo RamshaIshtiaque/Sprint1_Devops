@@ -5,7 +5,7 @@ import com.keyin.services.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
+import java.util.List;
 
 @RestController
 @RequestMapping("/airports")
@@ -15,7 +15,7 @@ public class AirportController {
     private AirportService airportService;
 
     @GetMapping
-    public Map<Integer, Airport> getAllAirports() {
+    public List<Airport> getAllAirports() {
         return airportService.getAllAirports();
     }
 

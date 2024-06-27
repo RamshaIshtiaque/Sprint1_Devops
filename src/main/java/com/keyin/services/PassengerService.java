@@ -15,8 +15,8 @@ public class PassengerService {
     private Map<Long, Passenger> passengerMap = new HashMap<>();
     private long currentId = 1;
 
-    public Map<Long, Passenger> getAllPassengers() {
-        return passengerMap;
+    public List<Passenger> getAllPassengers() {
+        return List.copyOf(passengerMap.values());
     }
 
     public Passenger getPassengerById(Long id) {

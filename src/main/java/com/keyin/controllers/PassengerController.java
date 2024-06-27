@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/passengers")
@@ -18,7 +17,7 @@ public class PassengerController {
     private PassengerService passengerService;
 
     @GetMapping
-    public Map<Long, Passenger> getAllPassengers() {
+    public List<Passenger> getAllPassengers() {
         return passengerService.getAllPassengers();
     }
 

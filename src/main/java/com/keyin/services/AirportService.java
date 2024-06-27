@@ -4,6 +4,7 @@ import com.keyin.models.Airport;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -11,8 +12,8 @@ public class AirportService {
     private Map<Integer, Airport> airportMap = new HashMap<>();
     private int currentId = 1;
 
-    public Map<Integer, Airport> getAllAirports() {
-        return airportMap;
+    public List<Airport> getAllAirports() {
+        return List.copyOf(airportMap.values());
     }
 
     public Airport getAirportById(Integer id) {

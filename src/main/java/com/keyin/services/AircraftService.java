@@ -15,8 +15,8 @@ public class AircraftService {
     private Map<Long, Aircraft> aircraftMap = new HashMap<>();
     private long currentId = 1;
 
-    public Map<Long, Aircraft> getAllAircraft() {
-        return aircraftMap;
+    public List<Aircraft> getAllAircraft() {
+        return List.copyOf(aircraftMap.values());
     }
 
     public Aircraft getAircraftById(Long id) {
