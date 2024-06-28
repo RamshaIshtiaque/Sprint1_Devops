@@ -1,6 +1,7 @@
 package com.keyin.services;
 
 import com.keyin.models.Airport;
+import com.keyin.models.City;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -40,6 +41,15 @@ public class AirportService {
 
     public void deleteAirport(Integer id) {
         airportMap.remove(id);
+    }
+
+    public City getAirportInCity(Integer id) {
+        Airport airport = airportMap.get(id);
+        if (airport != null) {
+            City city = airport.getCity();
+            return city;
+        }
+        return null;
     }
 }
 

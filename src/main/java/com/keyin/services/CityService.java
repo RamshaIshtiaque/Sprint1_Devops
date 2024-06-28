@@ -45,7 +45,7 @@ public class CityService {
         cityMap.remove(id);
     }
 
-    public List<Airport> getAirportsInCity(Long id) {
+    public List<Airport> getAirportsInCity(Integer id) {
         City city = cityMap.get(id);
         if (city != null) {
             return city.getAirports();

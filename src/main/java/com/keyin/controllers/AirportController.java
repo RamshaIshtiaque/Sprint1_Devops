@@ -1,6 +1,7 @@
 package com.keyin.controllers;
 
 import com.keyin.models.Airport;
+import com.keyin.models.City;
 import com.keyin.services.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -37,6 +38,11 @@ public class AirportController {
     @DeleteMapping("/{id}")
     public void deleteAirport(@PathVariable Integer id) {
         airportService.deleteAirport(id);
+    }
+
+    @GetMapping("/{id}/city")
+    public City getAirportInCity(@PathVariable Integer id) {
+        return airportService.getAirportInCity(id);
     }
 }
 

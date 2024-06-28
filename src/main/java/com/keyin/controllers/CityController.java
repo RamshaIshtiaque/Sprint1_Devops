@@ -44,7 +44,7 @@ public class CityController {
     }
 
     @GetMapping("/{id}/airports")
-    public List<Airport> getAirportsInCity(@PathVariable Long id) {
+    public List<Airport> getAirportsInCity(@PathVariable Integer id) {
         return cityService.getAirportsInCity(id);
     }
 
